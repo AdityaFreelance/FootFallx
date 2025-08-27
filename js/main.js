@@ -97,3 +97,41 @@ $(document).ready(function () {
         ]
     });
 });
+
+// testimonial slider
+$(document).ready(function () {
+    var $slider = $('.testimonial-row');
+    var slidesToShow = 3; // Matches your Slick setting
+    var $slides = $slider.children('.testimonial-col');
+
+    // Clone slides if less than slidesToShow + 1 (to allow infinite loop)
+    if ($slides.length <= slidesToShow) {
+        var clonesNeeded = slidesToShow + 1 - $slides.length;
+        for (var i = 0; i < clonesNeeded; i++) {
+            $slides.eq(i % $slides.length).clone().appendTo($slider);
+        }
+    }
+
+    // Now initialize the Slick slider with infinite loop
+    $slider.slick({
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+});

@@ -97,6 +97,10 @@ p {
     padding-block: 100px;
 }
 
+.pblock-150 {
+    padding-block: 150px;
+}
+
 .margin-200 {
     margin-bottom: 200px;
 }
@@ -316,11 +320,13 @@ header ul.navbar-nav {
     padding-right: 10% !important;
 }
 
-.service-cover .slick-track {
+.service-cover .slick-track,
+.testimonial-row .slick-track {
     margin-inline: -20px;
 }
 
-.service-cover .slick-track .service-slider-col {
+.service-cover .slick-track .service-slider-col,
+.testimonial-row .testimonial-col {
     padding-inline: 20px;
 }
 
@@ -340,16 +346,19 @@ header ul.navbar-nav {
     font-size: 26px;
 }
 
-.service-cover {
+.service-cover,
+.testimonial-cover-box {
     position: relative;
     padding-bottom: 112px;
 }
 
-.service-cover .service-cover-slider {
+.service-cover .service-cover-slider,
+.testimonial-cover-box .testimonial-row.slick-initialized.slick-slider {
     position: static;
 }
 
-.service-cover .service-cover-slider button.slick-arrow {
+.service-cover .service-cover-slider button.slick-arrow,
+.testimonial-cover-box button.slick-arrow {
     width: 66px;
     height: 66px;
     background: #606060;
@@ -369,12 +378,14 @@ header ul.navbar-nav {
     background-size: 43px 23px;
 }
 
-.service-cover .service-cover-slider button.slick-arrow::before {
+.service-cover .service-cover-slider button.slick-arrow::before,
+.testimonial-cover-box button.slick-arrow::before {
     content: "";
     display: none;
 }
 
-.service-cover .service-cover-slider button.slick-next.slick-arrow {
+.service-cover .service-cover-slider button.slick-next.slick-arrow,
+.testimonial-cover-box button.slick-next.slick-arrow {
     left: initial;
     right: 43%;
     background-image: url(../images/arrow-right.png);
@@ -641,15 +652,48 @@ header ul.navbar-nav {
 
 .cover-col::before {
     content: "";
-    width: 94%;
+    width: 70%;
     height: 2px;
     background-color: #606060;
     display: inline-block;
-    transform: rotate(35deg) translate(-21%, -22%);
+    transform: rotate(35deg) translate(-26%, -35%);
     position: absolute;
-    top: 68%;
-    left: 78%;
+    top: 58%;
+    left: 74%;
     z-index: -1;
+}
+
+.cover-col:nth-child(2n)::before {
+    transform: rotate(-30deg) translate(-100%, 39%);
+    top: 17%;
+    left: initial;
+    right: -92%;
+}
+
+.cover-col:nth-child(2n)::after {
+    top: 30.5%;
+    transform: rotate(-80deg) translate(-67.67%, 10px);
+    left: inherit;
+    right: -24%;
+}
+
+.cover-col:last-child::before,
+.cover-col:last-child::after {
+    display: none;
+}
+
+
+
+.cover-col::after {
+    content: '';
+    position: absolute;
+    top: 67%;
+    border: solid #606060;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: translate(-33%, -80%) rotate(-12deg);
+    left: 120%;
 }
 
 span.cover-icon {
@@ -677,7 +721,7 @@ span.cover-icon i {
     border-radius: 50%;
     position: relative;
     z-index: 9;
-    background-color: var(--custom-color1);
+    background-color: var(--custom-color);
 }
 
 .cover-box-icon::before {
@@ -692,6 +736,7 @@ span.cover-icon i {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .cover-box {
     display: flex;
@@ -716,4 +761,140 @@ span.cover-icon i {
 .cover-box-content p {
     font-size: 18px;
     line-height: 25px;
+}
+
+/* work-wrapper Css End */
+
+/* client-wrapper css Start */
+.client-wrapper .container>.row {
+    gap: 50px 0px;
+}
+
+.client-cover ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -35px;
+    gap: 50px 0px;
+    justify-content: center;
+}
+
+.client-cover ul li {
+    width: 20%;
+    flex: 0 0 auto;
+    padding-inline: 35px;
+}
+
+.client-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-image {
+    height: 71px;
+}
+
+/* client-wrapper css End */
+
+/* brand-wrapper css start */
+.custom-btn {
+    font-family: var(--secondry-font);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--custom-color1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+}
+
+.brand-wrapper .custom-btn {
+    margin-top: 40px;
+}
+
+.brand-wrap-image {
+    position: absolute;
+    bottom: 0px;
+    right: 6%;
+    width: 50%;
+}
+
+/* brand-wrapper css End */
+
+/* testimonial-wrapper Start */
+.testimonial-wrapper .row {
+    gap: 50px 0px;
+}
+
+.testimonial-box {
+    background-color: #F3F3F3;
+    padding: 33px 38px;
+}
+
+.testimonial-profile-image {
+    width: 109px;
+    height: 109px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 21px;
+}
+
+.testimonial-profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.testimonial-profile-content h4 {
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-profile-content p {
+    font-family: var(--secondry-font);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.testimonial-profile-content {
+    margin-bottom: 54px;
+}
+.testimonial-content{
+    margin-bottom: 50px;
+}
+.testimonial-content p {
+    position: relative;
+    padding-inline: 35px;
+}
+
+.testimonial-content p::before,
+.testimonial-content p::after {
+    content: "\f10d";
+    width: 34px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 36px;
+}
+
+.testimonial-content p::after {
+    content: "\f10e";
+    right: 0px;
+    left: initial !important;
+    top: initial !important;
+    bottom: 0px;
 }
