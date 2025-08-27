@@ -375,7 +375,7 @@ header ul.navbar-nav {
     background-image: url(../images/arrow.png);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 43px 23px;
+    background-size: 43px 20px;
 }
 
 .service-cover .service-cover-slider button.slick-arrow::before,
@@ -867,9 +867,11 @@ span.cover-icon i {
 .testimonial-profile-content {
     margin-bottom: 54px;
 }
-.testimonial-content{
+
+.testimonial-content {
     margin-bottom: 50px;
 }
+
 .testimonial-content p {
     position: relative;
     padding-inline: 35px;
@@ -897,4 +899,91 @@ span.cover-icon i {
     left: initial !important;
     top: initial !important;
     bottom: 0px;
+}
+
+/* testimonial-wrapper End */
+
+/* footer Start */
+footer {
+    background-color: var(--custom-color2);
+}
+
+.top-footer {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--custom-color1);
+}
+
+.top-footer .row {
+    margin-inline: -90px;
+}
+
+.top-footer .row .col-12 {
+    padding-inline: 90px;
+}
+
+.footet-logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.footet-logo img {
+    height: 51px;
+}
+
+.footer-logo-container p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footet-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -40px;
+}
+
+.footet-link-list ul {
+    width: 50%;
+    flex: 0 0 auto;
+    padding-inline: 40px;
+}
+
+.footet-link-list ul li+li {
+    margin-top: 20px;
+}
+
+.footer-link {
+    font-family: var(--secondry-font);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--custom-color1);
+    text-transform: capitalize;
+}
+
+.footer-contact-list ul li+li {
+    margin-top: 20px;
+}
+
+.footer-link:hover,
+.footer-content:hover {
+    color: var(--primary-color);
+}
+
+.footer-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 0px 35px;
+    color: var(--custom-color1);
+    font-weight: 400;
+    font-size: 22px;
+}
+.bottom-footer{
+    padding-block: 20px;
+}
+.bottom-footer p{
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--custom-color1);
 }
