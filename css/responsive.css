@@ -1,0 +1,363 @@
+@media screen and (max-width:1800px) {
+    .navbar-brand img {
+        height: 44px;
+    }
+
+    header nav.navbar {
+        padding-block: 22px;
+    }
+
+    .nav-link {
+        padding: 10px 15px !important;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 130px;
+        line-height: 135px;
+    }
+
+    .banner-wrapper h1 span {
+        font-size: 55px;
+        line-height: 60px;
+    }
+
+    .banner-wrapper {
+        height: 950px;
+        position: relative;
+        z-index: 99;
+    }
+
+    .pblock-100 {
+        padding-block: 80px;
+    }
+
+    h2 {
+        font-size: 45px;
+        line-height: 55px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .about-wrapper .container>.row {
+        gap: 44px 0px;
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 27px;
+    }
+
+    .service-slider-image-content p {
+        font-size: 22px;
+    }
+
+    .service-cover .service-cover-slider button.slick-arrow,
+    .testimonial-cover-box button.slick-arrow {
+        width: 55px;
+        height: 55px;
+        background-size: 30px 19px;
+    }
+
+    .service-cover .slick-track,
+    .testimonial-row .slick-track {
+        margin-inline: -16px;
+    }
+
+    .service-cover .slick-track .service-slider-col,
+    .testimonial-row .testimonial-col {
+        padding-inline: 16px;
+    }
+
+    .service-slider-image-content {
+        bottom: 37px;
+        left: 0px;
+        padding-inline: 35px;
+    }
+
+    .service-cover,
+    .testimonial-cover-box {
+        position: relative;
+        padding-bottom: 100px;
+    }
+
+    .whyus-heading {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 5px;
+    }
+
+    .whyus-para {
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    .whyus-box::before {
+        width: 1px;
+        height: 67%;
+        bottom: 18%;
+        left: -14%;
+        z-index: -1;
+    }
+
+    .whyus-col::after {
+        width: 50%;
+        height: 1px;
+        bottom: 17.9%;
+        right: -9.0%;
+    }
+
+    .whyus-col:nth-child(2n)::after {
+        bottom: initial;
+        top: 17%;
+        right: -9%;
+        width: 50%;
+    }
+
+    .whyus-col:nth-child(3)::before {
+        width: 50%;
+        left: 9%;
+        z-index: -1;
+    }
+
+    .whyus-col:nth-child(2n)::before {
+        bottom: initial;
+        top: 15%;
+        left: 9%;
+        z-index: -1;
+    }
+
+    .cover-col::after {
+        top: 67%;
+        padding: 7px;
+        transform: translate(-28%, -80%) rotate(-12deg);
+        left: 120%;
+    }
+
+    .cover-col:nth-child(2n)::after {
+        top: 29.5%;
+        transform: rotate(-80deg) translate(-67.67%, 10px);
+        right: -24%;
+    }
+
+    .custom-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 25px;
+    }
+
+    .testimonial-box {
+        padding: 30px 35px;
+    }
+
+    .testimonial-profile-image {
+        width: 95px;
+        height: 95px;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-profile-content p {
+        font-size: 17px;
+    }
+
+    .testimonial-profile-content {
+        margin-bottom: 45px;
+    }
+
+    .testimonial-content p {
+        padding-inline: 30px;
+        font-size: 20px;
+    }
+
+    .testimonial-content p::before,
+    .testimonial-content p::after {
+        content: "\f10d";
+        width: 34px;
+        height: 24px;
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width:1800px) {
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .nav-link {
+        padding: 8px 12px !important;
+        font-size: 18px;
+    }
+
+    header nav.navbar {
+        padding-block: 20px;
+    }
+
+    .pblock-100 {
+        padding-block: 60px;
+    }
+
+    .banner-wrapper {
+        height: 850px;
+        position: relative;
+        z-index: 99;
+    }
+
+    h1 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .banner-wrapper h1 span {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+/* New */
+/* Add animation keyframes */
+@keyframes lineGrowX {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes lineplaceX {
+    from {
+        right: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: -8.3%;
+        width: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrowY {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 66%;
+    }
+}
+
+@keyframes lineGrowPlaceY{
+    from{
+        height: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        height: 65%;
+        bottom: 18%;
+        opacity: 1;
+    }
+}
+
+/* Horizontal lines animate */
+
+
+/* Form First Box */
+.whyus-col:nth-child(1)::after {
+    animation-delay: 0.5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(2) .whyus-box::before {
+    animation-delay: 1s !important;
+    animation: lineGrowY 1s ease forwards;
+}
+
+/* For Second Box */
+.whyus-col:nth-child(2)::before {
+    animation-delay: 1.5s !important;
+    animation: lineGrowX 3s ease forwards;
+}
+
+.whyus-col:nth-child(2)::after{
+    animation-delay: 2s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(3) .whyus-box::before{
+    animation-delay: 2.5s !important;
+    animation: lineGrowPlaceY 1s ease forwards;
+}
+
+/* Third Box */
+
+.whyus-col:nth-child(3)::before{
+    animation-delay: 3s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:nth-child(3n)::after{
+    animation-delay: 3.5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(4) .whyus-box::before{
+    animation-delay: 4s !important;
+    animation: lineGrowY 1s ease forwards;
+}
+
+
+/* Fourth Box */
+.whyus-col:nth-child(4)::before{
+    animation-delay: 4.5s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:nth-child(4)::after{
+    animation-delay: 5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(5)::before{
+    animation-delay: 6s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:last-child .whyus-box::before{
+    animation-delay: 5.5s !important;
+    animation: lineGrowY 1s ease forwards;
+}
+
+
+/* Vertical connectors animate */
+
+

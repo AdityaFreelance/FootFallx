@@ -52,7 +52,8 @@ body {
     background-color: var(--custom-color1);
 }
 
-h1 {
+h1,
+#animated-text {
     font-family: var(--primary-font);
     font-weight: 800;
     font-size: 160px;
@@ -176,7 +177,7 @@ header ul.navbar-nav {
 
 /* Banner-wrapper Css Start */
 .banner-wrapper {
-    height: 100vh;
+    height: 1080px;
     position: relative;
     z-index: 99;
 }
@@ -211,6 +212,10 @@ header ul.navbar-nav {
     font-weight: 300 !important;
     font-size: 60px;
     line-height: 70px;
+}
+
+#animated-text {
+    font-weight: 800 !important;
 }
 
 .scroll-indicator {
@@ -298,7 +303,9 @@ header ul.navbar-nav {
 .service-slider-box {
     position: relative;
     z-index: 9;
+    overflow: hidden;
 }
+
 
 .service-slider-box::before {
     content: "";
@@ -312,8 +319,13 @@ header ul.navbar-nav {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
+.service-slider-box:hover .service-slider-image img {
+    transform: scale(1.1);
+}
+
 .service-slider-image img {
     width: 100%;
+    transition: transform 0.6s ease-in-out;
 }
 
 .service-wrapper .slick-list.draggable {
@@ -376,6 +388,12 @@ header ul.navbar-nav {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 43px 20px;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.service-cover .service-cover-slider button.slick-arrow:hover,
+.testimonial-cover-box button.slick-arrow:hover {
+    background-color: var(--primary-color);
 }
 
 .service-cover .service-cover-slider button.slick-arrow::before,
@@ -477,7 +495,7 @@ header ul.navbar-nav {
 .whyus-box::before {
     content: "";
     width: 1px;
-    height: 66%;
+    height: 0%;
     background-color: #606060;
     display: inline-block;
     position: absolute;
@@ -488,7 +506,8 @@ header ul.navbar-nav {
 
 .whyus-col::before {
     content: "";
-    width: 50%;
+    /* width: 50%; */
+    width: 0%;
     height: 1px;
     display: inline-block;
     background-color: #606060;
@@ -501,7 +520,8 @@ header ul.navbar-nav {
 .whyus-col:nth-child(2n)::after {
     bottom: initial;
     top: 51px;
-    right: -30px;
+    /* right: -30px; */
+    right: 0%;
     z-index: -1;
 }
 
@@ -514,13 +534,13 @@ header ul.navbar-nav {
 
 .whyus-col::after {
     content: "";
-    width: 50%;
+    width: 0%;
     height: 1px;
     display: inline-block;
     background-color: #606060;
     position: absolute;
     bottom: 17.9%;
-    right: -8.3%;
+    right: 0%;
     z-index: -1;
 }
 
@@ -533,21 +553,24 @@ header ul.navbar-nav {
 }
 
 .whyus-col:nth-child(3) .whyus-box::before {
-    bottom: 18%;
-    height: 65%;
+    bottom: 0%;
+    height: 0%;
     z-index: -1;
+    opacity: 0;
     left: -13%;
 }
 
 .whyus-col:nth-child(3)::before {
-    width: 50%;
+    /* width: 50%; */
+    width: 0%;
     left: 8%;
     z-index: -1;
 }
 
 .whyus-col:nth-child(4) .whyus-box::before {
     bottom: 55px;
-    height: 66%;
+    /* height: 66%; */
+    height: 0;
     z-index: -1;
 }
 
@@ -613,7 +636,8 @@ header ul.navbar-nav {
 }
 
 .whyus-col:last-child .whyus-box::before {
-    height: 65%;
+    /* height: 65%; */
+    height: 0%;
     bottom: 18%;
 }
 
@@ -935,6 +959,7 @@ footer {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    color: var(--custom-color1);
 }
 
 .footet-link-list {
@@ -978,10 +1003,12 @@ footer {
     font-weight: 400;
     font-size: 22px;
 }
-.bottom-footer{
+
+.bottom-footer {
     padding-block: 20px;
 }
-.bottom-footer p{
+
+.bottom-footer p {
     font-family: var(--primary-font);
     font-weight: 400;
     font-size: 14px;

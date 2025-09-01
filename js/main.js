@@ -50,6 +50,46 @@ window.addEventListener('resize', () => {
 });
 
 
+// heading animation
+const animatedText = document.getElementById("animated-text");
+const text = animatedText.textContent;
+let index = 0;
+let isDeleting = false;
+let started = false;
+
+function typeEffect() {
+    if (!isDeleting) {
+        animatedText.textContent = text.substring(0, index + 1);
+        index++;
+        if (index === text.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+            return;
+        }
+    } else {
+        animatedText.textContent = text.substring(0, index - 1);
+        index--;
+        if (index === 0) {
+            isDeleting = false;
+        }
+    }
+    setTimeout(typeEffect, isDeleting ? 120 : 180);
+}
+
+animatedText.textContent = "";
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !started) {
+            started = true;
+            setTimeout(typeEffect, 500);
+        }
+    });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector(".banner-heading"));
+
+
 // Scroll Down
 
 document.addEventListener("DOMContentLoaded", function () {
