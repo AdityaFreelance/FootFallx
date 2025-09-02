@@ -191,3 +191,23 @@ document.addEventListener("DOMContentLoaded", function () {
         once: true
     });
 });
+
+
+// Header
+
+const btn = document.getElementById("collapse-btn-nav");
+const navBox = document.getElementById("collapse-navbar-box");
+
+btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
+  navBox.classList.toggle("active");
+
+  // reset animation for nav items every time
+  const items = navBox.querySelectorAll(".nav-item");
+  items.forEach(item => {
+    item.style.animation = "none";
+    item.offsetHeight; // reflow trick
+    item.style.animation = "";
+  });
+});
+

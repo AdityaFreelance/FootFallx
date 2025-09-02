@@ -119,6 +119,15 @@ header {
     z-index: 1000;
 }
 
+button#collapse-btn-nav {
+    display: none;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    flex-basis: initial;
+}
+
 header.hide {
     transform: translateY(-100%);
     background-color: #00000091;
@@ -172,6 +181,7 @@ header nav.navbar {
 
 header ul.navbar-nav {
     gap: 0px 54px;
+    flex-direction: row;
 }
 
 
@@ -222,7 +232,7 @@ header ul.navbar-nav {
     position: absolute;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     text-align: center;
     color: white;
     font-family: sans-serif;
