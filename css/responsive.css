@@ -22,11 +22,6 @@
         line-height: 60px;
     }
 
-    .banner-wrapper {
-        height: 950px;
-        position: relative;
-        z-index: 99;
-    }
 
     .pblock-100 {
         padding-block: 80px;
@@ -97,52 +92,67 @@
         font-size: 15px;
     }
 
-    .whyus-box::before {
-        width: 1px;
-        height: 67%;
-        bottom: 18%;
-        left: -14%;
-        z-index: -1;
-    }
+    /* Whyus */
+    @keyframes lineplaceX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
 
-    .whyus-col::after {
-        width: 50%;
-        height: 1px;
-        bottom: 17.9%;
-        right: -9.0%;
-    }
-
-    .whyus-col:nth-child(2n)::after {
-        bottom: initial;
-        top: 17%;
-        right: -9%;
-        width: 50%;
-    }
-
-    .whyus-col:nth-child(3)::before {
-        width: 50%;
-        left: 9%;
-        z-index: -1;
+        to {
+            right: -11.3%;
+            width: 50%;
+            opacity: 1;
+        }
     }
 
     .whyus-col:nth-child(2n)::before {
         bottom: initial;
-        top: 15%;
-        left: 9%;
+        top: 48px;
+        left: 11.22%;
         z-index: -1;
     }
 
-    .cover-col::after {
-        top: 67%;
-        padding: 7px;
-        transform: translate(-28%, -80%) rotate(-12deg);
-        left: 120%;
+    .whyus-col:nth-child(2)::after {
+        animation-delay: 2s !important;
+        animation: lineplaceChildX 1s ease forwards;
     }
 
-    .cover-col:nth-child(2n)::after {
-        top: 29.5%;
-        transform: rotate(-80deg) translate(-67.67%, 10px);
-        right: -24%;
+    @keyframes lineplaceChildX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -11.0%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(3)::before {
+        left: 10.9%;
+    }
+
+    .whyus-col:nth-child(5)::before {
+        left: 36px;
+    }
+
+    .whyus-col:last-child .whyus-box::before {
+        animation: lineGrowChildY 1s ease forwards;
+    }
+
+    @keyframes lineGrowChildY {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 65%;
+        }
     }
 
     .custom-btn {
@@ -181,16 +191,70 @@
         height: 24px;
         font-size: 27px;
     }
+
+    .work-wrapper>.container>.row {
+        gap: 70px 0px;
+    }
+
+    .cover-box-content h3 {
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+    .cover-box-content p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    span.cover-icon i {
+        font-size: 65px;
+    }
+
+    span.cover-icon {
+        width: 125px;
+        height: 125px;
+    }
+
+    .cover-box-icon {
+        width: 165px;
+        height: 165px;
+        border: 3px solid #414042;
+    }
+
+    .cover-col:nth-child(2n)::before {
+        transform: rotate(-30deg) translate(-100%, 39%);
+        top: 20%;
+        left: initial;
+        right: -89%;
+    }
+
+    .cover-col:nth-child(2n)::after {
+        top: 31.5%;
+        transform: rotate(-80deg) translate(-67.67%, 10px);
+        left: inherit;
+        right: -21.5%;
+    }
+
+    .cover-col:nth-child(3)::before {
+        top: 58%;
+        left: 74%;
+        width: 67%;
+    }
+
+    .cover-col:nth-child(3)::after {
+        top: 66%;
+        left: 117%;
+    }
 }
 
-@media screen and (max-width:1800px) {
+@media screen and (max-width:1680px) {
     .navbar-brand img {
-        height: 40px;
+        height: 38px;
     }
 
     .nav-link {
-        padding: 8px 12px !important;
-        font-size: 18px;
+        padding: 5px 10px !important;
+        font-size: 17px;
     }
 
     header nav.navbar {
@@ -201,11 +265,7 @@
         padding-block: 60px;
     }
 
-    .banner-wrapper {
-        height: 850px;
-        position: relative;
-        z-index: 99;
-    }
+
 
     h1 {
         font-size: 100px;
@@ -233,131 +293,802 @@
         line-height: 31px;
         margin-bottom: 25px;
     }
-}
 
-
-
-
-
-/* New */
-/* Add animation keyframes */
-@keyframes lineGrowX {
-    from {
-        width: 0;
+    .whyus-heading {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 5px;
     }
 
-    to {
+    .whyus-para {
+        line-height: 19px;
+        font-size: 14px;
+    }
+
+    .whyus-box-icon {
+        height: 99px;
+    }
+
+    .whyus-box-icon img {
+        height: 90px;
+    }
+
+    @keyframes lineplaceX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -14.3%;
+            width: 57%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(2n)::before {
+        top: 48px;
+        left: 14.22%;
+        z-index: -1;
+    }
+
+    @keyframes lineplaceChildX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -14%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(3)::before {
+        left: 13.9%;
+        bottom: 54.5px;
+    }
+
+    .whyus-col:nth-child(3n)::after {
+        animation-delay: 3.5s !important;
+        animation: lineplaceResX 1s ease forwards;
+        bottom: 54.5px;
+    }
+
+    @keyframes lineplaceResX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -14.5%;
+            width: 58%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(5)::before {
+        left: 40px;
+        bottom: 54.5px;
+    }
+
+    .cover-box-content h3 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .cover-box-content p {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+    span.cover-icon i {
+        font-size: 50px;
+    }
+
+    span.cover-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .cover-box-icon {
+        width: 140px;
+        height: 140px;
+        border: 3px solid #414042;
+    }
+
+    .cover-col::before {
+        content: "";
+        width: 70%;
+        height: 2px;
+        top: 59%;
+        left: 75%;
+        z-index: -1;
+    }
+
+    .cover-col:nth-child(2n)::before {
+        transform: rotate(-30deg) translate(-100%, 39%);
+        top: 20%;
+        left: initial;
+        right: -92%;
+    }
+
+    .cover-col:nth-child(2n)::after {
+        top: 31%;
+        transform: rotate(-80deg) translate(-67.67%, 10px);
+        left: inherit;
+        right: -23.5%;
+    }
+
+    .top-footer {
+        padding-top: 49px;
+        padding-bottom: 20px;
+    }
+
+    .footet-logo img {
+        height: 44px;
+    }
+
+    .footet-logo {
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    .top-footer .row {
+        margin-inline: -55px;
+    }
+
+    .top-footer .row .col-12 {
+        padding-inline: 55px;
+    }
+
+    .footer-link {
+        font-size: 18px;
+    }
+
+    .footet-link-list ul li+li {
+        margin-top: 14px;
+    }
+
+    .footer-content {
+        gap: 0px 22px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:1480px) {
+    header ul.navbar-nav {
+        gap: 0px 45px;
+    }
+
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    .banner-wrapper h1 span {
+        font-size: 37px;
+        line-height: 47px;
+    }
+
+    h1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    .pblock-100 {
+        padding-block: 50px;
+    }
+
+    h2 {
+        font-size: 35px;
+        line-height: 45px;
+        margin-bottom: 20px;
+    }
+
+    .about-wrapper .container>.row {
+        gap: 40px 0px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .about-wrapper .col-lg-8 {
+        width: 75%;
+    }
+
+    .service-cover .slick-track,
+    .testimonial-row .slick-track {
+        margin-inline: -10px;
+    }
+
+    .service-cover .slick-track .service-slider-col,
+    .testimonial-row .testimonial-col {
+        padding-inline: 10px;
+    }
+
+    .service-cover .service-cover-slider button.slick-arrow,
+    .testimonial-cover-box button.slick-arrow {
+        width: 43px;
+        height: 43px;
+        background-size: 26px 13px;
+    }
+
+    .service-cover,
+    .testimonial-cover-box {
+        position: relative;
+        padding-bottom: 74px;
+    }
+
+    .service-slider-image-content p {
+        font-size: 18px;
+    }
+
+    .service-slider-image-content {
+        bottom: 30px;
+        left: 0px;
+        padding-inline: 20px;
+    }
+
+    .whyus-row {
+        margin-inline: -30px;
+    }
+
+    .whyus-col {
+        padding-inline: 30px;
+    }
+
+    .whyus-box-icon {
+        height: 90px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .whyus-box-icon img {
+        height: 80px;
+    }
+
+    @keyframes lineplaceX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -5.3%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(2n)::before {
+        top: 48px;
+        left: 5.22%;
+        z-index: -1;
+    }
+
+    @keyframes lineGrowY {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 65.3%;
+        }
+    }
+
+    .whyus-col:nth-child(2)::after {
+        top: 47px;
+    }
+
+    @keyframes lineplaceChildX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -4.5%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(3)::before {
+        left: 4.5%;
+        bottom: 52px;
+    }
+
+
+    @keyframes lineplaceResX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -5.5%;
+            width: 58%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(2)::before {
+        left: 5%;
+        top: 47px;
+    }
+
+    .whyus-col:nth-child(4)::after {
+        animation-delay: 5s !important;
+        animation: lineplaceX 1s ease forwards;
+        top: 49.4px;
+    }
+
+    .whyus-col:nth-child(3) .whyus-box::before {
+        animation-delay: 2.5s !important;
+        animation: lineGrowResPlaceY 1s ease forwards;
+    }
+
+    @keyframes lineGrowResPlaceY {
+        from {
+            height: 0;
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            height: 66%;
+            bottom: 18%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(4)::before {
+        top: 46px;
+        left: 5.22%;
+        z-index: -1;
+    }
+
+    .whyus-col:nth-child(5)::before {
+        left: 11px;
+        bottom: 52.5px;
+    }
+
+    span.cover-icon i {
+        font-size: 40px;
+    }
+
+    span.cover-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .cover-box-icon {
+        width: 116px;
+        height: 116px;
+        border: 3px solid #414042;
+    }
+
+    .cover-box {
+        gap: 40px 0px;
+    }
+
+    .work-wrapper .col-lg-10 {
+        width: 95%;
+    }
+
+    .cover-box-content h3 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .cover-col::before {
+        content: "";
+        width: 77%;
+        height: 2px;
+        top: 54%;
+        left: 75%;
+        z-index: -1;
+    }
+
+    .cover-col::after {
+        content: '';
+        position: absolute;
+        top: 63%;
+        border-width: 0 2px 2px 0;
+        padding: 7px;
+        transform: translate(-33%, -80%) rotate(-12deg);
+        left: 125%;
+    }
+
+    .cover-col:nth-child(2n)::before {
+        transform: rotate(-30deg) translate(-100%, 39%);
+        top: 14%;
+        left: initial;
+        right: -101%;
+    }
+
+    .cover-col:nth-child(2n)::after {
+        top: 26.1%;
+        transform: rotate(-80deg) translate(-67.67%, 10px);
+        left: inherit;
+        right: -26.0%;
+    }
+
+    .cover-col:nth-child(3)::before {
+        top: 53%;
+        left: 74%;
+        width: 74%;
+    }
+
+    .cover-col:nth-child(3)::after {
+        top: 61%;
+        left: 121%;
+    }
+
+    .client-wrapper .container>.row {
+        gap: 40px 0px;
+    }
+
+    .client-cover ul {
+        margin-inline: -25px;
+        gap: 20px 0px;
+    }
+
+    .client-cover ul {
+        padding-inline: 25px;
+    }
+
+    .margin-200 {
+        margin-bottom: 130px;
+    }
+
+    .pblock-150 {
+        padding-block: 80px;
+    }
+
+    .brand-wrapper .custom-btn {
+        margin-top: 25px;
+    }
+
+    .custom-btn {
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 25px;
+    }
+
+    .testimonial-box {
+        padding: 20px 25px;
+    }
+
+    .testimonial-profile-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 14px;
+    }
+
+    .testimonial-profile-content h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .testimonial-profile-content p {
+        font-size: 16px;
+    }
+
+    .testimonial-profile-content {
+        margin-bottom: 30px;
+    }
+
+    .testimonial-content p::before,
+    .testimonial-content p::after {
+        content: "\f10d";
+        width: 25px;
+        height: 20px;
+        font-size: 24px;
+    }
+
+    .testimonial-content p {
+        padding-inline: 25px;
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .testimonial-content {
+        margin-bottom: 35px;
+    }
+
+    .top-footer {
+        padding-top: 44px;
+        padding-bottom: 20px;
+    }
+
+    .top-footer .row {
+        margin-inline: -30px;
+        justify-content: space-between;
+    }
+
+    .footet-logo img {
+        height: 40px;
+    }
+
+    .top-footer .row .col-12 {
+        padding-inline: 30px;
+    }
+
+    .footer-logo-container p {
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .footet-link-list {
+        margin-inline: -30px;
+    }
+
+    .footet-link-list ul {
         width: 50%;
+        padding-inline: 30px;
+    }
+
+    .footer-link,
+    .footer-content {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        gap: 0px 18px;
+    }
+
+    .footer-contact-list ul li+li,
+    .footet-link-list ul li+li {
+        margin-top: 10px;
     }
 }
 
-@keyframes lineplaceX {
-    from {
-        right: 0;
-        width: 0;
-        opacity: 0;
+@media screen and (max-width:1200px) {
+    .navbar-brand img {
+        height: 33px;
     }
 
-    to {
-        right: -8.3%;
-        width: 50%;
-        opacity: 1;
+    header ul.navbar-nav {
+        gap: 0px 25px;
+    }
+
+    .nav-link {
+        padding: 5px 10px !important;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 70px;
+        line-height: 50px;
+    }
+
+    #animated-text {
+        font-size: 70px;
+    }
+
+    .banner-wrapper h1 span {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .pblock-100 {
+        padding-block: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 17px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+
+    .about-wrapper .container>.row {
+        gap: 30px 0px;
+    }
+
+    .whyus-row {
+        margin-inline: -18px;
+    }
+
+    .whyus-col {
+        padding-inline: 18px;
+    }
+
+    .whyus-heading {
+        font-size: 17px;
+        line-height: 21px;
+        margin-bottom: 5px;
+    }
+
+    @keyframes lineplaceX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -0.7%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(2)::before {
+        left: -0.1%;
+        top: 47px;
+    }
+
+    @keyframes lineplaceChildX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: 0.5%;
+            width: 50%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(3)::before {
+        left: -0.5%;
+        bottom: 52px;
+    }
+
+    @keyframes lineplaceResX {
+        from {
+            right: 0;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            right: -0.5%;
+            width: 58%;
+            opacity: 1;
+        }
+    }
+
+    .whyus-col:nth-child(4)::before {
+        top: 46px;
+        left: 0.22%;
+        z-index: -1;
+    }
+
+    .whyus-col:nth-child(5)::before {
+        left: 1px;
+        bottom: 52.5px;
+    }
+
+    .work-wrapper .col-lg-10 {
+        width: 100%;
+    }
+
+    span.cover-icon i {
+        font-size: 35px;
+    }
+
+    span.cover-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cover-box-icon {
+        width: 105px;
+        height: 105px;
+        border: 3px solid #414042;
+    }
+
+    .cover-box-icon::before {
+        width: 125px;
+        height: 125px;
+        display: inline-block;
+        border: 2px dotted #414042;
+        animation: rotateCircle 6s linear infinite;
+    }
+
+    .cover-col::before {
+        content: "";
+        width: 85%;
+        height: 2px;
+        top: 58%;
+        left: 74%;
+        z-index: -1;
+    }
+
+    .cover-col::after {
+        content: '';
+        position: absolute;
+        top: 67%;
+        border-width: 0 2px 2px 0;
+        padding: 7px;
+        transform: translate(-33%, -80%) rotate(-12deg);
+        left: 128%;
+    }
+
+    .cover-col:nth-child(2n)::before {
+        transform: rotate(-45deg) translate(-100%, 39%);
+        top: 7%;
+        left: initial;
+        right: -102%;
+    }
+
+    .cover-col:nth-child(3)::before {
+        top: 56%;
+        left: 74%;
+        width: 77%;
+    }
+
+    .cover-col:nth-child(3)::after {
+        top: 64%;
+        left: 123%;
+    }
+
+    section.client-wrapper .col-lg-10 {
+        width: 100%;
+    }
+
+    .client-cover ul {
+        margin-inline: -15px;
+        padding: 0px !important;
+    }
+
+    .client-cover ul li {
+        width: 20%;
+        flex: 0 0 auto;
+        padding-inline: 15px;
+    }
+
+    .margin-200 {
+        margin-bottom: 80px;
+    }
+
+    .client-image {
+        height: 64px;
+    }
+
+    .client-image img {
+        height: 100%;
     }
 }
 
-@keyframes lineGrowY {
-    from {
-        height: 0;
+@media screen and (max-width:1024px) {
+    .container {
+        max-width: 100%;
     }
 
-    to {
-        height: 66%;
+    .navbar-brand img {
+        height: 31px;
+    }
+
+    .pblock-100 {
+        padding-block: 40px;
+    }
+
+    .about-wrapper .col-lg-8 {
+        width: 90%;
     }
 }
-
-@keyframes lineGrowPlaceY{
-    from{
-        height: 0;
-        bottom: 0;
-        opacity: 0;
-    }
-    to{
-        height: 65%;
-        bottom: 18%;
-        opacity: 1;
-    }
+@media screen and (max-width:992px){
+    
 }
-
-/* Horizontal lines animate */
-
-
-/* Form First Box */
-.whyus-col:nth-child(1)::after {
-    animation-delay: 0.5s !important;
-    animation: lineplaceX 1s ease forwards;
-}
-
-.whyus-col:nth-child(2) .whyus-box::before {
-    animation-delay: 1s !important;
-    animation: lineGrowY 1s ease forwards;
-}
-
-/* For Second Box */
-.whyus-col:nth-child(2)::before {
-    animation-delay: 1.5s !important;
-    animation: lineGrowX 3s ease forwards;
-}
-
-.whyus-col:nth-child(2)::after{
-    animation-delay: 2s !important;
-    animation: lineplaceX 1s ease forwards;
-}
-
-.whyus-col:nth-child(3) .whyus-box::before{
-    animation-delay: 2.5s !important;
-    animation: lineGrowPlaceY 1s ease forwards;
-}
-
-/* Third Box */
-
-.whyus-col:nth-child(3)::before{
-    animation-delay: 3s !important;
-    animation: lineGrowX 1s ease forwards;
-}
-
-.whyus-col:nth-child(3n)::after{
-    animation-delay: 3.5s !important;
-    animation: lineplaceX 1s ease forwards;
-}
-
-.whyus-col:nth-child(4) .whyus-box::before{
-    animation-delay: 4s !important;
-    animation: lineGrowY 1s ease forwards;
-}
-
-
-/* Fourth Box */
-.whyus-col:nth-child(4)::before{
-    animation-delay: 4.5s !important;
-    animation: lineGrowX 1s ease forwards;
-}
-
-.whyus-col:nth-child(4)::after{
-    animation-delay: 5s !important;
-    animation: lineplaceX 1s ease forwards;
-}
-
-.whyus-col:nth-child(5)::before{
-    animation-delay: 6s !important;
-    animation: lineGrowX 1s ease forwards;
-}
-
-.whyus-col:last-child .whyus-box::before{
-    animation-delay: 5.5s !important;
-    animation: lineGrowY 1s ease forwards;
-}
-
-
-/* Vertical connectors animate */
-
-

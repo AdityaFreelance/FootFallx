@@ -177,7 +177,7 @@ header ul.navbar-nav {
 
 /* Banner-wrapper Css Start */
 .banner-wrapper {
-    height: 1080px;
+    height: 100vh;
     position: relative;
     z-index: 99;
 }
@@ -454,6 +454,10 @@ header ul.navbar-nav {
     z-index: 9;
 }
 
+.whyus-box:hover .whyus-box-icon img {
+    transform: scale(1.1);
+}
+
 .whyus-path {
     position: absolute;
     top: 0px;
@@ -565,6 +569,124 @@ header ul.navbar-nav {
     width: 0%;
     left: 8%;
     z-index: -1;
+}
+
+/* Add animation keyframes */
+@keyframes lineGrowX {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes lineplaceX {
+    from {
+        right: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: -8.3%;
+        width: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrowY {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 66%;
+    }
+}
+
+@keyframes lineGrowPlaceY {
+    from {
+        height: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 65%;
+        bottom: 18%;
+        opacity: 1;
+    }
+}
+
+/* Horizontal lines animate */
+
+
+/* Form First Box */
+.whyus-col:nth-child(1)::after {
+    animation-delay: 0.5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(2) .whyus-box::before {
+    animation-delay: 1s !important;
+    animation: lineGrowY 1s ease forwards;
+}
+
+/* For Second Box */
+.whyus-col:nth-child(2)::before {
+    animation-delay: 1.5s !important;
+    animation: lineGrowX 3s ease forwards;
+}
+
+.whyus-col:nth-child(2)::after {
+    animation-delay: 2s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(3) .whyus-box::before {
+    animation-delay: 2.5s !important;
+    animation: lineGrowPlaceY 1s ease forwards;
+}
+
+/* Third Box */
+
+.whyus-col:nth-child(3)::before {
+    animation-delay: 3s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:nth-child(3n)::after {
+    animation-delay: 3.5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(4) .whyus-box::before {
+    animation-delay: 4s !important;
+    animation: lineGrowY 1s ease forwards;
+}
+
+
+/* Fourth Box */
+.whyus-col:nth-child(4)::before {
+    animation-delay: 4.5s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:nth-child(4)::after {
+    animation-delay: 5s !important;
+    animation: lineplaceX 1s ease forwards;
+}
+
+.whyus-col:nth-child(5)::before {
+    animation-delay: 6s !important;
+    animation: lineGrowX 1s ease forwards;
+}
+
+.whyus-col:last-child .whyus-box::before {
+    animation-delay: 5.5s !important;
+    animation: lineGrowY 1s ease forwards;
 }
 
 .whyus-col:nth-child(4) .whyus-box::before {
@@ -759,7 +881,19 @@ span.cover-icon i {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: rotateCircle 6s linear infinite;
 }
+
+@keyframes rotateCircle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 
 
 .cover-box {
@@ -769,6 +903,10 @@ span.cover-icon i {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.cover-box:hover span.cover-icon i {
+    transform: scale(1.1);
 }
 
 .cover-col:nth-child(2n) .cover-box .cover-box-content {

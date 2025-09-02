@@ -175,3 +175,19 @@ $(document).ready(function () {
         ]
     });
 });
+
+
+// Client AOS Animation
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".client-cover li");
+
+    items.forEach((item, index) => {
+        item.setAttribute("data-aos", "fade-up");
+        item.setAttribute("data-aos-delay", index * 100);
+    });
+
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+});
